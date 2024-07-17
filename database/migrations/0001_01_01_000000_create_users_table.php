@@ -20,8 +20,8 @@ return new class extends Migration
             $table->rememberToken();
             $table->softDeletes();
             $table->boolean( 'status')->default(true);
-            $table->string('address');
-            $table->integer('phone_number');
+            $table->string('address')->nullable();
+            $table->integer('phone_number')->nullable();
             $table->timestamps();
         });
 

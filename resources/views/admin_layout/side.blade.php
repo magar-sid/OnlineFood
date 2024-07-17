@@ -5,6 +5,7 @@
         <span class="brand-text font-weight-light">TRAINING<span>
     </a>
 
+
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
@@ -67,7 +68,7 @@
                     <a href="{{route('product')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
-                            Product
+                            Restaurant
                             <span class="right badge badge-danger">New</span>
                         </p>
                     </a>
