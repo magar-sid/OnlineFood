@@ -32,8 +32,13 @@
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form>
+                            <form action="{{route('product.store')}}" method="post">
+                                @csrf
                                 <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="restaurant_id">Restaurant ID</label>
+                                        <input type="number" class="form-control" id="restaurant_id" name="restaurant_id" placeholder="Enter Restaurant ID">
+                                    </div>
                                     <div class="form-group">
                                         <label for="restaurants">Restaurant Name</label>
                                         <input type="text" class="form-control" id="restaurants" name="restaurants" placeholder="Enter Restaurant Name">
@@ -58,16 +63,10 @@
 {{--                                                <input type="file" class="custom-file-input" id="exampleInputFile">--}}
 {{--                                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>--}}
 {{--                                            </div>--}}
-                                            <div class="input-group-append">
-                                                <span class="input-group-text">Upload</span>
-                                            </div>
-                                        </div>
+
+
                                     </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                    </div>
-                                </div>
+
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
@@ -80,8 +79,9 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
 {{--                            <div class="card-header">--}}
-{{--                                <h3 class="card-title">Different Styles</h3>--}}
-{{--                            </div>--}}
+{{--                                <h3 class="card-title">Different Styles</h3>--}}{{--                                    </select>--}}
+
+                            {{--                            </div>--}}
                             <!-- /.card-header -->
 {{--                            <div class="card-body">--}}
 {{--                                <h4>Input</h4>--}}
@@ -120,7 +120,6 @@
 {{--                                        <option>Value 1</option>--}}
 {{--                                        <option>Value 2</option>--}}
 {{--                                        <option>Value 3</option>--}}
-{{--                                    </select>--}}
 {{--                                </div>--}}
 {{--                            </div>--}}
                             <!-- /.card-body -->
