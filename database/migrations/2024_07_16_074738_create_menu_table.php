@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->decimal('price', 8, 2);
             $table->unsignedBigInteger('restaurant_id');
+            $table->boolean('availability');
             $table->unsignedBigInteger('category_id');
             $table->foreign('restaurant_id')->references('id')->on('restaurants');
             $table->foreign('category_id')->references('id')->on('categories');
