@@ -35,25 +35,55 @@
                             <form action="{{route('product.store')}}" method="post">
                                 @csrf
                                 <div class="card-body">
+{{--                                    @if ($errors->any())--}}
+{{--                                        <div class="alert alert-danger">--}}
+{{--                                            <ul>--}}
+{{--                                                @foreach ($errors->all() as $error)--}}
+{{--                                                    <li>{{ $error }}</li>--}}
+{{--                                                @endforeach--}}
+{{--                                            </ul>--}}
+{{--                                        </div>--}}
+{{--                                    @endif--}}
                                     <div class="form-group">
                                         <label for="restaurant_id">Restaurant ID</label>
                                         <input type="number" class="form-control" id="restaurant_id" name="restaurant_id" placeholder="Enter Restaurant ID">
+
+                                        @error('restaurant_id')
+                                        <p class="text-danger">This is required</p>
+                                        @enderror
+
                                     </div>
                                     <div class="form-group">
                                         <label for="restaurants">Restaurant Name</label>
                                         <input type="text" class="form-control" id="restaurants" name="restaurants" placeholder="Enter Restaurant Name">
+
+                                        @error('restaurants')
+                                        <p class="text-danger">This is required</p>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="address">Address</label>
                                         <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
+
+                                        @error('address')
+                                        <p class="text-danger">This is required</p>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="phone">Phone Number</label>
                                         <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number">
+
+                                        @error('phone')
+                                        <p class="text-danger">This is required</p>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
                                         <label for="description">Description</label>
                                         <input type="text" class="form-control" id="description" name="description" placeholder="Enter Description">
+
+                                        @error('description')
+                                        <p class="text-danger">This is required</p>
+                                        @enderror
                                     </div>
 
 {{--                                    <div class="form-group">--}}
